@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-val layout= this.findViewById<ConstraintLayout>(R.id.layout)
+        val layout= this.findViewById<ConstraintLayout>(R.id.layout)
         val myRv =findViewById<RecyclerView>(R.id.rvMain)
         val button1=findViewById<Button>(R.id.button)
         val name = findViewById<EditText>(R.id.Name).text
@@ -25,13 +25,14 @@ val layout= this.findViewById<ConstraintLayout>(R.id.layout)
 
         button1.setOnClickListener{
 
-            if(name.isNotEmpty()){
-                userInput.add(name.toString())
-                name.clear()
-            }else{
-                Snackbar.make(layout,"enter a name pleas!!",Snackbar.LENGTH_LONG)
 
-            }
+                userInput.add(name.toString())
+
+                name.clear()
+
+              ///  Snackbar.make(layout,"enter a name pleas!!",Snackbar.LENGTH_LONG)
+
+
 
 
         }
